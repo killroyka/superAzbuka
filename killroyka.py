@@ -19,7 +19,12 @@ import telegram
 import config
 import datetime as dt
 import models
-
+from random import choice
+a = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'p', 'a', 's', 'd', 'f',
+     'g', 'h', 'j', 'k', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '2',
+     '3', '4', '5', '6', '7', '8', '9',
+     'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'P', 'A', 'S', 'D', 'F',
+     'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
 c = 0
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -41,6 +46,14 @@ def start(update, context):
 def help(update, context):
     """Send a message when the command /help is issued."""
     update.message.reply_text('/blala, /kaka, /start, /last kol vo ras')
+
+b = ''
+def generate_password(update, context):
+    for x in range(10):
+        b.append(choice(a))
+    c = ''.join(b)
+    b.clear()
+    update.message.reply_text(c)
 
 
 def blala(update, context):
@@ -108,6 +121,7 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("blala", blala))
     dp.add_handler(CommandHandler("last", last))
+    dp.add_handler(CommandHandler("kaka", kaka))
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
     else:
