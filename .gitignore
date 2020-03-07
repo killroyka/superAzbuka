@@ -1,0 +1,137 @@
+.idea/
+bot.db
+
+__pycache__ /
+* .py [ cod ]
+* $ py.class
+
+# C расширения
+* .so
+
+# Распространение / упаковка
+.Python
+построить /
+развивающиеся яйца /
+dist /
+загрузки /
+яйца /
+.eggs /
+lib /
+lib64 /
+части /
+sdist /
+вар /
+колеса /
+метаданные pip-wheel /
+поделиться / python-wheel /
+* .egg-info /
+.installed.cfg
+* .egg
+МАНИФЕСТ
+
+# PyInstaller
+#   Обычно эти файлы пишутся скриптом Python из шаблона
+#   Перед тем PyInstaller строит ех, чтобы инъекционные дата / другие Infos в нее.
+* .manifest
+* .spec
+
+# Установщик логов
+пип-log.txt
+пип-удаления-это-directory.txt
+
+# Отчеты о модульных тестах
+htmlcov /
+.tox /
+.nox /
+.coverage
+.coverage. *
+.cache
+nosetests.xml
+coverage.xml
+* .cover
+* .py, обложка
+Гипотеза /
+.pytest_cache /
+обложка /
+
+# Переводы
+* .mo
+* .pot
+
+# Джанго вещи:
+* .log
+local_settings.py
+db.sqlite3
+db.sqlite3-журнал
+
+# Фляги:
+экземпляр /
+.webassets-кэш
+
+# Scrapy вещи:
+.scrapy
+
+# Сфинкс документация
+документы / _build /
+
+# PyBuilder
+цель /
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default /
+ipython_config.py
+
+# pyenv
+#    Для библиотеки или пакета вы можете игнорировать эти файлы, так как код
+#    предназначен для работы в нескольких средах; в противном случае отметьте их в:
+# .python-версия
+
+# pipenv
+#    Согласно pypa / pipenv # 598, рекомендуется включать Pipfile.lock в систему контроля версий.
+#    Однако, в случае сотрудничества, если есть зависимости от платформы или зависимости
+# не    имея кроссплатформенной поддержки, pipenv может устанавливать зависимости, которые не работают, или нет
+#    установить все необходимые зависимости.
+# Pipfile.lock
+
+# PEP 582; используется, например, github.com/David-OConnor/pyflow
+__pypackages__ /
+
+# Сельдерей
+celerybeat-график
+celerybeat.pid
+
+# SageMath проанализировал файлы
+* .sage.py
+
+# Среды
+.env
+.venv
+env /
+Venv /
+ENV /
+env.bak /
+venv.bak /
+
+# Настройки проекта Spyder
+.spyderproject
+.spyproject
+
+# Настройки проекта веревки
+.ropeproject
+
+# документация mkdocs
+/ сайт
+
+# mypy
+.mypy_cache /
+.dmypy.json
+dmypy.json
+
+# Проверка типа Pyre
+.pyre /
+
+# pytype статический анализатор типов
+.pytype /
