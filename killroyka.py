@@ -121,7 +121,7 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("blala", blala))
     dp.add_handler(CommandHandler("last", last))
-    dp.add_handler(CommandHandler("kaka", kaka))
+    dp.add_handler(CommandHandler("pass", generate_password()))
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
     else:
