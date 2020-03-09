@@ -88,7 +88,7 @@ def save(update, context):
     )
 
 
-def last(update, context: CallbackContext):
+def last(update, context:  ):
     last = 10
     if len(context.args) > 0:
         last = int(context.args[0])
@@ -121,7 +121,7 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("blala", blala))
     dp.add_handler(CommandHandler("last", last))
-    dp.add_handler(CommandHandler("pass", generate_password()))
+    dp.add_handler(CommandHandler("pass", generate_password))
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
     else:
