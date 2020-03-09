@@ -20,6 +20,7 @@ import config
 import datetime as dt
 import models
 from random import choice
+
 a = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'p', 'a', 's', 'd', 'f',
      'g', 'h', 'j', 'k', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '2',
      '3', '4', '5', '6', '7', '8', '9',
@@ -47,7 +48,10 @@ def help(update, context):
     """Send a message when the command /help is issued."""
     update.message.reply_text('/blala, /kaka, /start, /last kol vo ras')
 
+
 b = ''
+
+
 def generate_password(update, context):
     for x in range(10):
         b.append(choice(a))
@@ -88,7 +92,7 @@ def save(update, context):
     )
 
 
-def last(update, context:  ):
+def last(update, context: CallbackContext):
     last = 10
     if len(context.args) > 0:
         last = int(context.args[0])
