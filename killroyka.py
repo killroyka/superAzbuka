@@ -52,8 +52,8 @@ def help(update, context):
 b = []
 
 
-def generate_password(update, context):
-    for x in range(10):
+def generate_password(update, context: CallbackContext):
+    for x in range(context.args[0]):
         b.append(choice(a))
     c = ''.join(b)
     b.clear()
