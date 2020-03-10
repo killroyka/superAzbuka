@@ -14,15 +14,12 @@ c = 0
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-# Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
 
-# Define a few command handlers. These usually take the two arguments update and
-# context. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
     """Send a message when the command /start is issued."""
     update.message.reply_text('Hi!')
@@ -44,9 +41,9 @@ def generate_password(update, context: CallbackContext):
     update.message.reply_text(c)
 
 
-def blala(update, context):
-    global c
-    for x in range(11):
+def blala(update, context: CallbackContext):
+    c = int(context.args[0])
+    for x in range(c):
         update.message.reply_text(x)
     c += 1
     update.message.reply_text('ya sdelal')
