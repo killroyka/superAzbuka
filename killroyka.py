@@ -49,7 +49,7 @@ def help(update, context):
     update.message.reply_text('/blala, /kaka, /start, /last kol vo ras')
 
 
-b = ''
+b = []
 
 
 def generate_password(update, context):
