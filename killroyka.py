@@ -74,11 +74,11 @@ def save(update, context):
 
 
 def last(update, context: CallbackContext):
-    last = 10
+    last_message = 10
     if len(context.args) > 0:
-        last = int(context.args[0])
+        last_message = int(context.args[0])
     msg: telegram.Message = update.message
-    for msg2 in models.Message.filter(chat_id=msg.chat_id).order_by(models.Message.id.desc()).limit(last):
+    for msg2 in models.Message.filter(chat_id=msg.chat_id).order_by(models.Message.id.desc()).limit(last_message):
         update.message.reply_text(msg2.text)
 
 
