@@ -27,7 +27,7 @@ def start(update, context):
 
 def help(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('/blala, /kaka, /start, /last kol vo ras')
+    update.message.reply_text('/blala, /kaka, /start, /last kol vo ras, /pass kol vo ras')
 
 
 b = []
