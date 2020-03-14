@@ -40,31 +40,32 @@ def generate_password(update, context: CallbackContext):
     c = ''.join(b)
     b.clear()
     update.message.reply_text(c)
+
+
 def roots_of_quadratic_equation(update, context: CallbackContext):
-    a = int(context.args[0])
-    b = int(context.args[1])
-    c = int(context.args[2])
+    alpha = int(context.args[0])
+    beta = int(context.args[1])
+    charlie = int(context.args[2])
     result = []
-    if a == 0 and b == 0 and c == 0:
+    if alpha == 0 and beta == 0 and charlie == 0:
         result.append('all')
         return result
-    elif a != 0:
-        d = (b * b) - (4 * a * c)
+    elif alpha != 0:
+        d = (beta * beta) - (4 * alpha * charlie)
         if d > 0:
-            x1 = (b * -1 + math.sqrt(d)) / (2 * a)
-            x2 = (b * -1 - math.sqrt(d)) / (2 * a)
+            x1 = (beta * -1 + math.sqrt(d)) / (2 * alpha)
+            x2 = (beta * -1 - math.sqrt(d)) / (2 * alpha)
             result.append(int(x1))
             result.append(int(x2))
-        elif a == 0 and b == 0 and c == 0:
+        elif alpha == 0 and beta == 0 and charlie == 0:
             result.append('all')
         elif d == 0:
-            x1 = (b * -1 + math.sqrt(d)) / (2 * a)
+            x1 = (beta * -1 + math.sqrt(d)) / (2 * alpha)
             result.append(x1)
-    elif b != 0 and c != 0:
-        result.append(-c / b)
+    elif beta != 0 and charlie != 0:
+        result.append(-charlie / beta)
     for x in result:
         update.message.reply_text(x)
-
 
 
 def blala(update, context: CallbackContext):
