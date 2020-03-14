@@ -49,7 +49,6 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
     result = []
     if alpha == 0 and beta == 0 and charlie == 0:
         result.append('all')
-        return result
     elif alpha != 0:
         d = (beta * beta) - (4 * alpha * charlie)
         if d > 0:
