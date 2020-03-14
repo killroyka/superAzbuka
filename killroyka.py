@@ -3,6 +3,7 @@ import telegram
 import config
 import datetime as dt
 import models
+import math
 from random import choice
 
 a = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'p', 'a', 's', 'd', 'f',
@@ -39,6 +40,31 @@ def generate_password(update, context: CallbackContext):
     c = ''.join(b)
     b.clear()
     update.message.reply_text(c)
+def roots_of_quadratic_equation(update, context: CallbackContext):
+    a = int(context.args[0])
+    b = int(context.args[1])
+    c = int(context.args[2])
+    result = []
+    if a == 0 and b == 0 and c == 0:
+        result.append('all')
+        return result
+    elif a != 0:
+        d = (b * b) - (4 * a * c)
+        if d > 0:
+            x1 = (b * -1 + math.sqrt(d)) / (2 * a)
+            x2 = (b * -1 - math.sqrt(d)) / (2 * a)
+            result.append(int(x1))
+            result.append(int(x2))
+        elif a == 0 and b == 0 and c == 0:
+            result.append('all')
+        elif d == 0:
+            x1 = (b * -1 + math.sqrt(d)) / (2 * a)
+            result.append(x1)
+    elif b != 0 and c != 0:
+        result.append(-c / b)
+    for x in result:
+        update.message.reply_text(x)
+
 
 
 def blala(update, context: CallbackContext):
