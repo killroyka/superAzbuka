@@ -64,7 +64,7 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
             result.append(x1)
     elif beta != 0 and charlie != 0:
         result.append(-charlie / beta)
-    print(x)
+    print(result)
     for x in result:
         update.message.reply_text(x)
 
