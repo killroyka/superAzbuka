@@ -68,6 +68,13 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
         update.message.reply_text(x)
 
 
+def geom(update, context: CallbackContext):
+    b1 = int(context.args[0])
+    q = int(context.args[1])
+    n = int(context.args[2])
+    update.message.reply_text(b * q ** (n - 1))
+
+
 def blala(update, context: CallbackContext):
     c = int(context.args[0])
     for x in range(c + 1):
@@ -135,6 +142,8 @@ def main():
     dp.add_handler(CommandHandler("last", last))
     dp.add_handler(CommandHandler("pass", generate_password))
     dp.add_handler(CommandHandler("resh", roots_of_quadratic_equation))
+    dp.add_handler(CommandHandler("geom", geom))
+
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
     else:
