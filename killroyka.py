@@ -69,7 +69,7 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
 
 
 def geom(update, context: CallbackContext):
-    b1 = int(context.args[0])
+    b = int(context.args[0])
     q = int(context.args[1])
     n = int(context.args[2])
     update.message.reply_text(b * q ** (n - 1))
