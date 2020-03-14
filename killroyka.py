@@ -67,6 +67,9 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
     for x in result:
         update.message.reply_text(x)
 def only1(update, context):
+    update.message.reply_text('Тебе плохо?')
+    for x in range(10):
+        update.message.reply_text('Напиши мне, сладкая')
     update.message.reply_text('Люблю тебя;)')
 
 def geom(update, context: CallbackContext):
