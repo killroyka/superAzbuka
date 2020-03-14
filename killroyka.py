@@ -28,7 +28,7 @@ def start(update, context):
 
 def help(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('/blala, /kaka, /start, /last kol vo ras, /pass kol vo ras')
+    update.message.reply_text('/blala, /kaka, /start, /last kol vo ras, /pass kol vo ras, /resh a b c')
 
 
 b = []
@@ -69,7 +69,7 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
 
 def blala(update, context: CallbackContext):
     c = int(context.args[0])
-    for x in range(c):
+    for x in range(c + 1):
         update.message.reply_text(x)
     c += 1
     update.message.reply_text('ya sdelal')
@@ -133,6 +133,7 @@ def main():
     dp.add_handler(CommandHandler("blala", blala))
     dp.add_handler(CommandHandler("last", last))
     dp.add_handler(CommandHandler("pass", generate_password))
+    dp.add_handler(CommandHandler("resh", roots_of_quadratic_equation))
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
     else:
