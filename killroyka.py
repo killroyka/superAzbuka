@@ -73,6 +73,8 @@ def only1(update, context):
     update.message.reply_text('Люблю тебя;)')
 def update(update, context):
     update.massege.reply_text('i am alive')
+
+
 update()
 
 def geom(update, context: CallbackContext):
