@@ -68,11 +68,6 @@ def roots_of_quadratic_equation(update, context: CallbackContext):
         update.message.reply_text(x)
 
 
-def echo(update, context):
-    """Echo the user message."""
-    update.message.reply_text(update.message.text)
-
-
 def only1(update, context):
     update.message.reply_text('Тебе плохо?')
     for x in range(10):
@@ -135,7 +130,7 @@ def last(update, context: CallbackContext):
         update.message.reply_text(msg2.text)
 
 
-def echo(update, context):
+def echo3(update, context):
     update.message.reply_text(update.message.text)
 
 
@@ -163,7 +158,7 @@ def main():
     dp.add_handler(CommandHandler("resh", roots_of_quadratic_equation))
     dp.add_handler(CommandHandler("geom", geom))
     dp.add_handler(CommandHandler("only_for_you", only1))
-    dp.add_handler(MessageHandler(Filters.text, echo))
+    dp.add_handler(MessageHandler(Filters.text, echo3))
 
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
