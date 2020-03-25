@@ -11,7 +11,6 @@ class User(BaseModel):
     tg_id = peewee.BigIntegerField(index=True)
     full_name = peewee.CharField(index=True)
 
-
 class Message(BaseModel):
     message_id = peewee.BigIntegerField()
     chat_id = peewee.BigIntegerField()
