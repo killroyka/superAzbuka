@@ -79,9 +79,6 @@ def update(update, context):
     update.massege.reply_text('i am alive')
 
 
-update()
-
-
 def geom(update, context: CallbackContext):
     b = int(context.args[0])
     q = int(context.args[1])
