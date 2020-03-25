@@ -71,6 +71,9 @@ def only1(update, context):
     for x in range(10):
         update.message.reply_text('Напиши мне, сладкая')
     update.message.reply_text('Люблю тебя;)')
+def update(update, context):
+    update.massege.reply_text('i am alive')
+update()
 
 def geom(update, context: CallbackContext):
     b = int(context.args[0])
