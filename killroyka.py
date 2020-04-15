@@ -46,7 +46,7 @@ def generate_password(update, context: CallbackContext):
     update.message.reply_text(c)
 
 
-def Who_is_moyka_today(update):
+def Who_is_moyka_today(update, context):
     a = choice(work)
     if dt.date.today().day % 2 == 0 and dt.date.today().day != 31:
         if a != "опять работа":
