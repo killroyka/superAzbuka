@@ -181,8 +181,8 @@ def main():
     dp.add_handler(CommandHandler("resh", roots_of_quadratic_equation))
     dp.add_handler(CommandHandler("geom", geom))
     dp.add_handler(CommandHandler("only_for_you", only1))
-    dp.add_handler(MessageHandler(Filters.text, echo3))
     dp.add_handler(CommandHandler("ktomoyka", Who_is_moyka_today))
+    dp.add_handler(MessageHandler(Filters.text, echo3))
 
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
