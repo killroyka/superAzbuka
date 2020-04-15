@@ -6,6 +6,10 @@ import models
 import math
 from random import choice
 
+work = ["moyka today", "иди мой", "недомойка", "мой чисто)))", "опять работа"]
+mama = ["MOM", "мама", '"рабыня из ора"']
+zuf = ["ZufikPufik", "Зуфар", "Пуфик", "Мелкий", "Зуфика"]
+tag = ['Такир', "KILLROYKA", "Доченька", "Прынц", "Приемный)))"]
 a = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'p', 'a', 's', 'd', 'f',
      'g', 'h', 'j', 'k', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '2',
      '3', '4', '5', '6', '7', '8', '9',
@@ -40,6 +44,28 @@ def generate_password(update, context: CallbackContext):
     c = ''.join(b)
     b.clear()
     update.message.reply_text(c)
+
+
+def Who_is_moyka_today(update):
+    a = choice(work)
+    if dt.date.today().day % 2 == 0 and dt.date.today().day != 31:
+        if a != "опять работа":
+            update.message.reply_text(choice(tag))
+            update.message.reply_text(a)
+        else:
+            update.message.reply_text(a)
+    elif dt.date.today().day % 2 != 0 and dt.date.today().day != 31:
+        if a != "опять работа":
+            update.message.reply_text(choice(zuf))
+            update.message.reply_text(a)
+        else:
+            update.message.reply_text(a)
+    else:
+        if a != "опять работа":
+            update.message.reply_text(choice(mama))
+            update.message.reply_text(a)
+        else:
+            update.message.reply_text(a)
 
 
 def roots_of_quadratic_equation(update, context: CallbackContext):
@@ -156,6 +182,7 @@ def main():
     dp.add_handler(CommandHandler("geom", geom))
     dp.add_handler(CommandHandler("only_for_you", only1))
     dp.add_handler(MessageHandler(Filters.text, echo3))
+    dp.add_handler(CommandHandler("ktomoyka", Who_is_moyka_today))
 
     if config.HEROKU_APP_NAME is None:
         updater.start_polling()
