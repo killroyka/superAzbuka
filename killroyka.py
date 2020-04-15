@@ -50,13 +50,13 @@ def Who_is_moyka_today(update, context):
     a = choice(work)
     if dt.date.today().day % 2 == 0 and dt.date.today().day != 31:
         if a != "опять работа":
-            update.message.reply_text(choice(tag))
+            update.message.reply_text(choice(zuf))
             update.message.reply_text(a)
         else:
             update.message.reply_text(a)
     elif dt.date.today().day % 2 != 0 and dt.date.today().day != 31:
         if a != "опять работа":
-            update.message.reply_text(choice(zuf))
+            update.message.reply_text(choice(tag))
             update.message.reply_text(a)
         else:
             update.message.reply_text(a)
