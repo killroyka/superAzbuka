@@ -61,7 +61,7 @@ def Who_is_moyka_today(update, context):
         else:
             update.message.reply_text(a)
     else:
-        if a != "опять работа":
+        if a != "опять работа, бля":
             update.message.reply_text(choice(mama))
             update.message.reply_text(a)
         else:
