@@ -185,6 +185,5 @@ def main():
                               url_path=config.TOKEN)
         updater.bot.set_webhook(f"https://{config.HEROKU_APP_NAME}.herokuapp.com/{config.TOKEN}")
 
-save()
 if __name__ == '__main__':
     main()
